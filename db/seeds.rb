@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+u1 = User.create!(username: "guv", first_name: "Guv", last_name: "Singh", email: "Guv@apnaplates.com")
+u2 = User.create!(username: "mike", first_name: "Mike", last_name: "Hayden", email: "Mike.Hayden@gmail.com")
+u3 = User.create!(username: "james", first_name: "James", last_name: "Carrodano", email: "James@gmail.com")
+u4 = User.create!(username: "mark", first_name: "Mark", last_name: "Sherrington", email: "Mark@gmail.com")
+
+p1 = u1.plates.create!(plate: "1 6UV", meaning: "1 GUV", sell_price: 50000)
+p2 = u2.plates.create!(plate: "M1 KES", meaning: "MIKES", sell_price: 10000)
+p3 = u3.plates.create!(plate: "J4 MES", meaning: "JAMES", sell_price: 25000)
+p4 = u4.plates.create!(plate: "M4 RKS", meaning: "MARKS", sell_price: 15000)
+p5 = u1.plates.create!(plate: "6 54NDU", meaning: "SANDHU", sell_price: 25000)
+p6 = u4.plates.create!(plate: "WA11KER", meaning: "WALKER", sell_price: 25000)
+p6 = u2.plates.create!(plate: "JQ11ERY", meaning: "JQUERY", sell_price: 10000)
