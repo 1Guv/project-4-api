@@ -1,4 +1,6 @@
 class PlatesController < ApplicationController
+  # used skip_before_action below to view api in insomnia
+  skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_plate, only: [:show, :update, :destroy]
 
   # GET /plates

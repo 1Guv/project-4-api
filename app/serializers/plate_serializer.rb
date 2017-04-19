@@ -1,5 +1,6 @@
 class PlateSerializer < ActiveModel::Serializer
-  attributes :id, :plate, :meaning, :sell_price, :plate_length
+  has_many :bids
+  attributes :id, :plate, :meaning, :sell_price, :plate_length, :status, :start_date, :expiry_date, :reserve
   has_one :user
 
   def plate_length

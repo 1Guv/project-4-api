@@ -1,4 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
+  has_many :bids
   has_many :plates
   attributes :id, :username, :first_name, :last_name, :email, :full_name
 
