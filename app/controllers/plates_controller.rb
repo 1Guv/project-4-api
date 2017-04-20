@@ -18,6 +18,7 @@ class PlatesController < ApplicationController
   # POST /plates
   def create
     @plate = Plate.new(plate_params)
+    @plate.user = current_user
 
     if @plate.save
       render json: @plate, status: :created, location: @plate
@@ -48,6 +49,6 @@ class PlatesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def plate_params
-      params.require(:plate).permit(:user_id, :plate, :meaning, :sell_price)
+      params.require(:plate).permit(:user_id, :plate, :meaning, :sell_price, :start_date, :status, :resume, :expiry_date)
     end
 end
