@@ -12,7 +12,7 @@ class PlatesController < ApplicationController
 
   # GET /plates/1
   def show
-    render json: @plate
+    render json: @plate, include: ["bids", "bids.user"]
   end
 
   # POST /plates
