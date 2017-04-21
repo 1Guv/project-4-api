@@ -49,6 +49,6 @@ class PlatesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def plate_params
-      params.require(:plate).permit(:user_id, :plate, :meaning, :sell_price, :start_date, :status, :resume, :expiry_date)
+      params.require(:plate).permit(:user_id, :plate, :meaning, :sell_price, :start_date, :status, :reserve, :expiry_date)
     end
 end
