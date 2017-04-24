@@ -7,7 +7,7 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins ['localhost:7000', 'https://lit-wave-30682.herokuapp.com']
+    origins ['localhost:7000', 'heroku ']
 
     resource '*',
       headers: :any,
